@@ -12,7 +12,23 @@
 #include <algorithm>
 #include <vector>
 
-namespace gpw::sp {
+namespace gpw::sp::filter {
+
+template <
+    class random_access_iter_t,
+    class T = typename random_access_iter_t::value_type>
+T median (
+    random_access_iter_t first, random_access_iter_t last, double threshold = 3
+) {
+    // Make a copy of the original data and perform some preparation.
+    std::vector<T> s (first, last);
+    const auto halfsize = s.size() / 2;
+    const auto center = s.begin() + halfsize;
+
+    // Find median in the original sequence.
+    std::nth_element (s.begin(), center, s.end());
+    return *center;
+}
 
 template <
     class random_access_iter_t,
@@ -78,6 +94,6 @@ T hampel_filter (
                : med;
 }
 
-} // namespace gpw::sp
+} // namespace gpw::sp::filter
 
 #endif
