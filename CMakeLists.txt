@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 3.16..3.24)
 
 set (CMAKE_CXX_STANDARD 17)
 
-project (signal_processing VERSION 0.0.1
+project (sigproc VERSION 0.0.1
   DESCRIPTION "Signal Processing Toolkit"
   LANGUAGES CXX)
 
@@ -14,5 +14,5 @@ include (CTest)
 
 # Add subdirectories with code
 add_subdirectory (external)
-add_subdirectory (signal_processing)
+add_subdirectory (sigproc)
 add_subdirectory (test)
