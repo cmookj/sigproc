@@ -1,9 +1,7 @@
 #include "hampel.hpp"
 #include <gtest/gtest.h>
-#include <rbm/rbm.hpp>
 
 using namespace gpw::sigproc;
-using namespace gpw::geometry;
 
 TEST (Statistics, Median) {
     std::vector<int> x {2, 4, 6, 8, 10};
