@@ -5,8 +5,6 @@ if (BUILD_TESTING)
   add_executable (sigproc_test hampel_test.cpp)
   target_link_libraries (sigproc_test PRIVATE
     libsigproc
-    /usr/local/lib/librbm.a
-    /usr/local/lib/libblat.a
     GTest::gtest_main)
 
   target_include_directories (sigproc_test PRIVATE
