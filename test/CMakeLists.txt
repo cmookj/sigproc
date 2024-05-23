@@ -2,7 +2,10 @@
 # It is set to ON by default
 
 if (BUILD_TESTING)
-  add_executable (sigproc_test hampel_test.cpp)
+  add_executable (sigproc_test
+    hampel_test.cpp
+    tail_window_stat_test.cpp
+  )
   target_link_libraries (sigproc_test PRIVATE
     libsigproc
     GTest::gtest_main)
