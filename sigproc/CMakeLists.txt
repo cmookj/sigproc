@@ -5,7 +5,8 @@ project (sigproc VERSION 0.0.1
   LANGUAGES CXX)
 
 add_library (libsigproc STATIC
-  ${PROJECT_SOURCE_DIR}/src/hampel.cpp)
+  ${PROJECT_SOURCE_DIR}/src/hampel.cpp
+  ${PROJECT_SOURCE_DIR}/src/tail_window_stat.cpp)
 
 target_include_directories (libsigproc PUBLIC
   ${PROJECT_SOURCE_DIR}/include)
